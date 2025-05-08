@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>学联活动 | 亚琛中国学生学者联合会</title><link>https://cancms.github.io/vcwsa/event/</link><atom:link href="https://cancms.github.io/vcwsa/event/index.xml" rel="self" type="application/rss+xml"/><description>学联活动</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>zh-Hans</language><image><url>https://cancms.github.io/vcwsa/media/icon_hu_92bf3a96ac177120.png</url><title>学联活动</title><link>https://cancms.github.io/vcwsa/event/</link></image><item><title>[2024]亚琛波恩春节联欢晚会</title><link>https://cancms.github.io/vcwsa/event/2023-12-31/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cancms.github.io/vcwsa/event/2023-12-31/</guid><description>&lt;p>即将到来的2024年伊始，有两件亚琛留德华们最关心的事：其一是紧张刺激的考试季，另一则是一年一度的重头戏：春晚！&lt;/p>
+&lt;p>演员们与学联的各位再紧罗密鼓地筹备着，辰龙伴随着呼啸的风雨悄然而至。&lt;/p>
+&lt;p>新年龙来运转，未来皆可期。&lt;/p>
+&lt;h3 id="晚会安排">晚会安排&lt;/h3>
+&lt;p>2024年1月5日&lt;/p>
+&lt;p>晚19:00&lt;/p>
+&lt;p>地点： Hauptgebaude, aula 1&lt;/p></description></item><item><title>Example Event</title><link>https://cancms.github.io/vcwsa/event/example/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cancms.github.io/vcwsa/event/example/</guid><description>&lt;p>Slides can be added in a few ways:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Create&lt;/strong> slides using Wowchemy&amp;rsquo;s &lt;a href="https://docs.hugoblox.com/managing-content/#create-slides" target="_blank" rel="noopener">&lt;em>Slides&lt;/em>&lt;/a> feature and link using &lt;code>slides&lt;/code> parameter in the front matter of the talk file&lt;/li>
+&lt;li>&lt;strong>Upload&lt;/strong> an existing slide deck to &lt;code>static/&lt;/code> and link using &lt;code>url_slides&lt;/code> parameter in the front matter of the talk file&lt;/li>
+&lt;li>&lt;strong>Embed&lt;/strong> your slides (e.g. Google Slides) or presentation video on this page using &lt;a href="https://docs.hugoblox.com/writing-markdown-latex/" target="_blank" rel="noopener">shortcodes&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;p>Further event details, including page elements such as image galleries, can be added to the body of this page.&lt;/p></description></item></channel></rss>
