@@ -1,0 +1,3 @@
+{{ $cssClass:= .Get "cssClass" }}
+{{ $src:= .Get "src" }}
+<img src="{{ $src | relLangURL }}" class="{{ $cssClass }}" />

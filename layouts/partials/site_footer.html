@@ -1,0 +1,170 @@
+{{/* 默认按weight排序，  越大越后  */}}
+{{ $latest_event_pages := last 4 ( where ( where .Site.RegularPages "Section" "event" ) "IsPage" true ) }}
+
+{{/*
+--- {{  $latest_event_pages }} ---
+--- {{ len $latest_event_pages }} ---
+*/}}
+
+
+<footer class="site-footer">
+  <div class="container">
+
+
+    <div class="row footer-sidebar">
+      <div class="col-md-4">
+        <aside id="text-1" class="widget widget_text wow fadeInDown animated animated" data-wow-delay="0.4s"
+               style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
+          <div class="section-header"><h3 class="widget-title">合作和赞助伙伴</h3><span></span></div>
+          <div class="textwidget"></div>
+        </aside>
+        <aside id="block-7" class="widget widget_block wow fadeInDown animated animated" data-wow-delay="0.4s"
+               style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
+          <div class="wp-block-group">
+            <div class="wp-block-group__inner-container">
+              <figure class="wp-block-image size-full is-resized">
+                <a href="https://www.xcmg.com/">
+                  <img loading="lazy"
+                       src="{{ "design/xcmg.png" | relURL }}"
+                       alt=""
+                       class="wp-image-290"
+                       width="223"
+                       height="58">
+                </a>
+              </figure>
+            </div>
+          </div>
+        </aside>
+        <aside id="block-8" class="widget widget_block wow fadeInDown animated animated" data-wow-delay="0.4s"
+               style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
+          <div class="wp-block-group">
+            <div class="wp-block-group__inner-container">
+              <figure class="wp-block-image size-large is-resized">
+                <a href="https://www.siemens.com/de/de.html">
+                  <img
+                    loading="lazy"
+                    src="{{ "design/siemens.png" | relURL }}"
+                    alt="" class="wp-image-289" width="220" height="42"
+                  >
+                </a></figure>
+            </div>
+          </div>
+        </aside>
+        <aside id="block-5" class="widget widget_block widget_media_image wow fadeInDown animated animated"
+               data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
+          <figure class="wp-block-image size-full is-resized">
+            <a href="https://www.aok.de/pk/rh/">
+              <img loading="lazy"
+                   src="{{ "design/aok.png" | relURL }}"
+                   alt=""
+                   class="wp-image-288"
+                   width="211"
+                   height="65"
+              >
+            </a>
+          </figure>
+        </aside>
+      </div>
+
+      <div class="col-md-4">
+        <aside id="categories-2" class="widget widget_categories wow fadeInDown animated animated" data-wow-delay="0.4s"
+               style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
+          <div class="section-header"><h3 class="widget-title">分类目录</h3><span></span></div>
+          <form  >
+            <label class="screen-reader-text" for="cat">分类目录</label>
+            <select  name="vcwsa" id="cat" class="postform">
+            <option value="-1">选择分类</option>
+            <option class="level-0" value="pages/handbook">新生攻略</option>
+            <option class="level-0" value="pages/aboutus">关于我们</option>
+            <option class="level-0" value="event">学联活动</option>
+          </select>
+          </form>
+          <script type="text/javascript">
+            /* <![CDATA[ */
+            (function () {
+              var dropdown = document.getElementById("cat");
+
+              function onCatChange() {
+                const optionValue = dropdown.options[dropdown.selectedIndex].value;
+                if (optionValue) {
+                  window.location.href = `{{ "" | relLangURL }}${optionValue}`;
+                }
+              }
+
+              dropdown.onchange = onCatChange;
+            })();
+            /* ]]> */
+          </script>
+
+        </aside>
+        <aside id="media_image-2" class="widget widget_media_image wow fadeInDown animated animated"
+               data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
+          <a
+            href="{{ "" | relLangURL }}">
+            <img width="300" height="140"
+                 src="{{ "design/about_vcwsa.jpg" | relURL }}"
+                 class="image wp-image-94  attachment-medium size-medium" alt=""
+                 loading="lazy" style="max-width: 100%; height: auto;"
+            >
+          </a>
+        </aside>
+      </div>
+
+      <div class="col-md-4">
+
+        <aside id="recent-posts-2" class="widget widget_recent_entries wow fadeInDown animated animated"
+               data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
+          <div class="section-header"><h3 class="widget-title">近期活动</h3><span></span></div>
+          <ul>
+
+
+              {{ range $latest_event_pages}}
+                <li>
+                  <a
+                    href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                  <span class="post-date">{{ .Params.post_date }}</span>
+                </li>
+              {{ end }}
+
+        {{/*
+            <li>
+              <a
+                href="https://www.vcwsa.rwth-aachen.de/events/2023/11/20/%e4%ba%9a%e7%90%9b%e5%a5%bd%e5%a3%b0%e9%9f%b3%ef%bc%9a%e4%b8%80%e5%9c%ba%e9%9f%b3%e4%b9%90%e7%9b%9b%e5%ae%b4%e7%ad%89%e4%bd%a0%e6%9d%a5%e4%ba%ab/">亚琛好声音：一场音乐盛宴等你来享</a>
+              <span class="post-date">2023-11-20</span>
+            </li>
+            <li>
+              <a
+                href="https://www.vcwsa.rwth-aachen.de/recruitment/2021/10/04/%e4%ba%9a%e7%90%9b%e5%ad%a6%e8%81%9421-22%e5%b1%8a%e6%8b%9b%e6%96%b0%e5%bc%80%e5%a7%8b%e5%95%a6/">亚琛学联21/22届招新开始啦</a>
+              <span class="post-date">2021-10-04</span>
+            </li>
+            <li>
+              <a
+                href="https://www.vcwsa.rwth-aachen.de/events/2020/11/24/%e5%8c%97%e5%a8%81%e5%b7%9e%e7%ba%bf%e4%b8%8a%e7%94%b5%e7%ab%9e%e8%b5%9b/">北威州线上电竞赛</a>
+              <span class="post-date">2020-11-24</span>
+            </li>
+            <li>
+              <a
+                href="https://www.vcwsa.rwth-aachen.de/events/2020/10/12/%e4%ba%9a%e7%90%9b%e6%95%85%e4%ba%8b/">亚琛故事</a>
+              <span class="post-date">2020-10-12</span>
+            </li>
+            */}}
+          </ul>
+
+        </aside>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="site-info wow fadeIn animated animated" data-wow-delay="0.4s"
+             style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+          <p>Copyright © 2019, <a
+            href="http://www.vcwsa.rwth-aachen.de/">亚琛学生学者联合会</a> | Created by <a
+            href="https://www.facebook.com/zhichang.wang.Sven">Zhichang</a> | Designed by <a
+            href="https://ochicken.net">Shouran Ma</a></p></div>
+      </div>
+    </div>
+
+  </div>
+</footer>
