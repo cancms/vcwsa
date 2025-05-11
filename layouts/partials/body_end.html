@@ -1,6 +1,8 @@
 <!--Scroll To Top-->
 <a href="#" class="hc_scrollup"  ><i class="fa fa-chevron-up"></i></a>
 
+<script type="text/javascript" src="{{ "js/wow.min.js" | relLangURL }}"></script>
+
 
 <script>
 
@@ -22,7 +24,21 @@
       return false;
     });
 
+
+    //Initiat WOW JS
+    new WOW().init();
+
   });
+
+
+  // jQuery(function($) {'use strict';
+  //
+  //   //Initiat WOW JS
+  //   new WOW().init();
+  //   //smoothScroll
+  //   //smoothScroll.init();
+  //
+  // });
 
 
 </script>

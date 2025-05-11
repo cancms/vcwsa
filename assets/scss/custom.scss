@@ -1,3 +1,5 @@
+@import "animate";
+
 // Override this file to add your own SCSS styling.
 
 
@@ -269,6 +271,8 @@ a:hover, a:focus {
 
   .animated {
     animation-duration: 1s;
+    //animation-iteration-count: 1;
+    animation-iteration-count: unset;
   }
 
    .post {
